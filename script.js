@@ -9,7 +9,7 @@ formularioProvincias.addEventListener("submit", (e)=>{
   console.log(e.target.children["provincia"].value)
   const consulta = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad},ar&appid=71db4a3153716749adab248fafe3b05e&units=metric`)
   .then(respuesta => respuesta.json())
-  .then(datos => console.log(datos.main.temp))
+  .then(datos => console.log(datos.main.temp + " grados"))
   .catch(error => console.log("no se pudo comunicar con el servidor"))
 })
 
