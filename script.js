@@ -51,3 +51,22 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   })
   .then((response) => response.json())
   .then((data) => console.log(data))
+
+// archivo data json
+const lista2 = document.querySelector('#listado2')
+fetch('/data.json')
+    .then( (res) => res.json())
+    .then( (data) => {
+
+        data.forEach((producto) => {
+            const li = document.createElement('li')
+            li.innerHTML = `
+                <h4>${producto.nombre}</h4>
+                <p>${producto.precio}</p>
+                <p>Código: ${producto.id}</p>
+                <hr/>
+            `
+   
+            lista2.append(li)
+        })
+    })
