@@ -16,7 +16,7 @@ formularioProvincias.addEventListener("submit", async (e)=>{
   try{
     const resp = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad},ar&appid=71db4a3153716749adab248fafe3b05e&units=metric`)
     const data = await resp.json()
-    console.log(data.main.temp + " grados")
+    alert("Ciudad: " + ciudad + "Temp: " + data.main.temp + " grados")
   }catch(e){
     console.log("no se pudo comunicar con el servidor")
   }
@@ -74,3 +74,5 @@ fetch('/data.json')
     fetch('https://swapi.dev/api/people/')
     .then((response) => response.json())
     .then((json) => console.log(json));
+
+    
