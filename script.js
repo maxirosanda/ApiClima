@@ -21,7 +21,7 @@ formularioProvincias.addEventListener("submit", async (e)=>{
     console.log("no se pudo comunicar con el servidor")
   }
 })
-
+/*
 // traer los post de placeholder
   const lista = document.querySelector('#listado')
 fetch('https://jsonplaceholder.typicode.com/posts')
@@ -70,3 +70,7 @@ fetch('/data.json')
             lista2.append(li)
         })
     })
+    */
+    fetch('https://swapi.dev/api/people/')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
